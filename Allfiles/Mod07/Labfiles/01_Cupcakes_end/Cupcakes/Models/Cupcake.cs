@@ -13,11 +13,11 @@ namespace Cupcakes.Models
         [Key]
         public int CupcakeId { get; set; }
 
-        [Required(ErrorMessage = "Please select a cupcake type")]
+        [Required(ErrorMessage = "Please choose a cupcake type")]
         [Display(Name = "Cupcake Type:")]
         public CupcakeType? CupcakeType { get; set; }
 
-        [Required(ErrorMessage = "Please enter a cupcake description")]
+        [Required(ErrorMessage = "Please write a cupcake description")]
         [Display(Name = "Description:")]
         public string Description { get; set; }
 
@@ -34,9 +34,8 @@ namespace Cupcakes.Models
         public double? Price { get; set; }
 
         [NotMapped]
-        [Display(Name = "Cupcake Picture:")]
+        [Display(Name = "Cupcake Picture: ")]
         public IFormFile PhotoAvatar { get; set; }
-
         public string ImageName { get; set; }
 
         public byte[] PhotoFile { get; set; }
